@@ -1,0 +1,7 @@
+Dataset,Rows,Columns
+profitability_ratios.csv,1175,7
+liquidity_ratios.csv,1312,5
+solvency_ratios.csv,1175,5
+efficiency_ratios.csv,1175,5
+growth_ratios.csv,1360,9
+valuation_ratios.csv,552,5
