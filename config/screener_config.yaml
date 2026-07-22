@@ -1,0 +1,9 @@
+roe_min: 0
+de_max: 100
+fcf_min: -100000
+icr_min: 0
+asset_turnover_min: 0
+market_cap_min: 0
+pe_max: 100000
+pb_max: 100000
+dividend_yield_min: 0

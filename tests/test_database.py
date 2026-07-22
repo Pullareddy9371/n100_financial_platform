@@ -11,8 +11,27 @@ def test_database_exists():
         "SELECT name FROM sqlite_master WHERE type='table';"
     )
 
-    tables = cursor.fetchall()
+    tables = {
+        row[0]
+        for row in cursor.fetchall()
+    }
 
     conn.close()
 
-    assert len(tables) == 12
+    expected = {
+        "companies",
+        "analysis",
+        "balancesheet",
+        "cashflow",
+        "documents",
+        "profitandloss",
+        "prosandcons",
+        "financial_ratios",
+        "market_cap",
+        "peer_groups",
+        "sectors",
+        "stock_prices",
+        "peer_percentiles"
+    }
+
+    assert expected.issubset(tables)
