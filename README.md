@@ -1,79 +1,182 @@
 # 📊 N100 Financial Intelligence Platform
 
-![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange)
-![SQLite](https://img.shields.io/badge/Database-SQLite-green)
-![Pytest](https://img.shields.io/badge/Testing-Pytest-red)
-![GitHub](https://img.shields.io/badge/Version%20Control-GitHub-black)
+A comprehensive Financial Intelligence Dashboard developed using **Python, SQLite, Streamlit, Pandas, and Plotly**. This project provides an end-to-end solution for analyzing Nifty 100 companies through financial analytics, stock screening, peer comparison, valuation analysis, sector insights, and interactive dashboards.
 
 ---
 
 # Project Overview
 
-The **N100 Financial Intelligence Platform** is an end-to-end Financial Data Engineering project developed during the **Bluestock Fintech Internship**.
+The N100 Financial Intelligence Platform is designed to help investors, analysts, and learners explore the financial performance of Nifty 100 companies.
 
-The platform automates the extraction, validation, transformation, storage, and analysis of financial datasets for Nifty 100 companies. It combines ETL processes with financial analytics to generate meaningful Key Performance Indicators (KPIs) and business insights.
+The project includes:
 
----
-
-# Project Objectives
-
-- Extract financial datasets from Excel files
-- Clean and normalize financial data
-- Validate data quality
-- Store processed data in SQLite
-- Calculate financial ratios and KPIs
-- Generate analytical reports
-- Export business insights
-- Perform automated testing
-- Maintain version control using Git and GitHub
+- Data Engineering (ETL)
+- SQLite Database Management
+- Financial Ratio Analytics
+- Stock Screening
+- Peer Comparison
+- Valuation Analytics
+- Interactive Streamlit Dashboard
+- CSV & Excel Report Generation
 
 ---
 
-# Technology Stack
+# Project Modules
 
-| Category | Technology |
-|----------|------------|
-| Language | Python 3.11 |
-| Data Processing | Pandas |
-| Database | SQLite3 |
-| Excel Processing | OpenPyXL |
-| Testing | Pytest |
-| IDE | Visual Studio Code |
-| Version Control | Git & GitHub |
+| Module | Status |
+|---------|--------|
+| ✅ ETL Pipeline | Completed |
+| ✅ SQLite Database | Completed |
+| ✅ Financial Ratio Analytics | Completed |
+| ✅ Stock Screener | Completed |
+| ✅ Peer Comparison | Completed |
+| ✅ Financial Trends | Completed |
+| ✅ Sector Analysis | Completed |
+| ✅ Capital Allocation | Completed |
+| ✅ Reports Module | Completed |
+| ✅ Valuation Analytics | Completed |
+| ✅ Interactive Dashboard | Completed |
 
 ---
 
-# Project Architecture
+# Dashboard Pages
 
-```
-Excel Files
-      │
-      ▼
-ETL Pipeline
-      │
-      ▼
-Data Validation
-      │
-      ▼
-Data Normalization
-      │
-      ▼
-SQLite Database
-      │
-      ▼
-Financial Analytics
-      │
-      ▼
-CSV Reports & KPI Outputs
-```
+## 🏠 Home Dashboard
+
+Displays:
+
+- Total Companies
+- Average ROE
+- Average Debt to Equity
+- Average Net Profit Margin
+- Asset Turnover
+- Sector Distribution
+- KPI Cards
+
+---
+
+## 🏢 Company Profile
+
+Displays:
+
+- Company Details
+- ROE
+- ROCE
+- Book Value
+- Company Overview
+
+---
+
+## 🔍 Stock Screener
+
+Supports filtering by:
+
+- Company Name
+- Sector
+- PE Ratio
+- PB Ratio
+- ROE
+- Debt to Equity
+- Market Capitalization
+
+---
+
+## 🤝 Peer Comparison
+
+Compare companies based on:
+
+- ROE
+- Net Profit Margin
+- PE Ratio
+- PB Ratio
+- Debt to Equity
+- Interest Coverage
+
+---
+
+## 📈 Financial Trends
+
+Interactive visualizations of:
+
+- Revenue Trend
+- Profit Trend
+- ROE Trend
+- Margin Trend
+
+---
+
+## 🏭 Sector Analysis
+
+Provides:
+
+- Sector Distribution
+- Company Count
+- Market Cap Category
+- Sector Comparison
+
+---
+
+## 💰 Capital Allocation
+
+Displays:
+
+- Free Cash Flow
+- Capital Expenditure
+- Operating Cash Flow
+- Debt Analysis
+
+---
+
+## 📑 Reports
+
+Generate and download:
+
+- CSV Reports
+- Excel Reports
+
+---
+
+## 💎 Valuation Dashboard
+
+Calculates:
+
+- Free Cash Flow Yield
+- Sector Median PE
+- Sector Median PB
+- Dividend Yield
+- Valuation Classification
+
+Categories:
+
+- Discount
+- Fair
+- Caution
+- Unknown
+
+---
+
+# Technologies Used
+
+- Python 3.11
+- Streamlit
+- Pandas
+- SQLite
+- Plotly
+- OpenPyXL
+- Matplotlib
+- PyYAML
+- Pytest
+- Git
+- GitHub
 
 ---
 
 # Project Structure
 
 ```
-n100_financial_platform/
+n100_financial_platform
+│
+├── config/
 │
 ├── data/
 │   ├── raw/
@@ -82,256 +185,170 @@ n100_financial_platform/
 ├── db/
 │   └── nifty100.db
 │
+├── reports/
+│
 ├── src/
 │   ├── analytics/
-│   │   ├── ratios.py
-│   │   ├── cagr.py
-│   │   ├── cashflow_kpis.py
-│   │   ├── day08.py
-│   │   ├── day09.py
-│   │   ├── day10.py
-│   │   ├── day11.py
-│   │   ├── day12.py
-│   │   ├── day13.py
-│   │   ├── day14.py
-│   │   ├── day15.py
-│   │   ├── day16.py
-│   │   └── day17.py
-│   │
+│   ├── dashboard/
+│   │   ├── app.py
+│   │   └── pages/
 │   ├── etl/
-│   │   ├── loader.py
-│   │   ├── normaliser.py
-│   │   ├── validator.py
-│   │   ├── database.py
-│   │   ├── data_loader.py
-│   │   ├── verify_database.py
-│   │   └── manual_review.py
-│   │
-│   └── output/
-│       ├── capital_allocation.csv
-│       ├── efficiency_ratios.csv
-│       └── ratio_edge_cases.log
+│   ├── output/
+│   ├── screener/
+│   └── utils/
 │
 ├── tests/
-│
+├── README.md
 ├── requirements.txt
-├── main.py
-└── README.md
+└── .gitignore
 ```
 
 ---
 
-# Datasets
+# Database Tables
 
-The platform processes **12 financial datasets**.
-
-| Dataset |
-|----------|
-| Analysis |
-| Balance Sheet |
-| Cash Flow |
-| Companies |
-| Documents |
-| Financial Ratios |
-| Market Cap |
-| Peer Groups |
-| Profit & Loss |
-| Pros and Cons |
-| Sectors |
-| Stock Prices |
+- Companies
+- Financial Ratios
+- Market Capitalization
+- Sectors
+- Balance Sheet
+- Profit & Loss
+- Cash Flow
+- Documents
+- Analysis
+- Pros & Cons
+- Peer Groups
+- Stock Prices
 
 ---
 
-# ETL Workflow
+# Features
 
-1. Load Excel datasets
-2. Normalize column names
-3. Validate datasets
-4. Detect duplicate records
-5. Handle missing values
-6. Create SQLite database
-7. Load datasets into database
-8. Verify loaded tables
-9. Generate validation reports
-
----
-
-# Data Validation
-
-The following quality checks are performed:
-
-- Duplicate row detection
-- Duplicate ID detection
-- Missing value detection
-- Negative value detection
-- Data type verification
-- Row count verification
-- Database integrity checks
+- Interactive Streamlit Dashboard
+- Financial Ratio Analysis
+- KPI Cards
+- Stock Screening
+- Peer Comparison
+- Company Search
+- Sector Filters
+- Financial Trend Analysis
+- Capital Allocation Analysis
+- Valuation Engine
+- CSV Export
+- Excel Export
+- Interactive Plotly Charts
 
 ---
 
-# Financial Analytics
+# Analytics Performed
 
-## Profitability Ratios
-
-- Net Profit Margin
-- Operating Profit Margin
-- Return on Equity (ROE)
-- Return on Capital Employed (ROCE)
-- Return on Assets (ROA)
-
----
-
-## Liquidity Ratios
-
-- Current Ratio
-- Quick Ratio
-- Cash Ratio
+- Profitability Analysis
+- Liquidity Analysis
+- Solvency Analysis
+- Efficiency Analysis
+- Growth Analysis
+- Valuation Analysis
+- Free Cash Flow Yield
+- Sector Median PE & PB Analysis
+- Dividend Yield Analysis
 
 ---
 
-## Efficiency Ratios
+# Output Files
 
-- Asset Turnover Ratio
-- Fixed Asset Turnover
-- Investment Turnover
+Generated reports include:
 
----
-
-## Leverage Ratios
-
-- Debt to Equity Ratio
-- Interest Coverage Ratio
-
----
-
-## CAGR Analysis
-
-- Revenue CAGR
-- Profit CAGR
-- EPS CAGR
-
----
-
-## Cash Flow KPIs
-
-- Free Cash Flow
-- CFO Quality Score
-- CapEx Intensity
-- FCF Conversion Rate
-- Cash Flow Pattern Analysis
-
----
-
-# Outputs Generated
-
-The project generates the following outputs:
-
-- capital_allocation.csv
+- profitability_ratios.csv
+- liquidity_ratios.csv
+- solvency_ratios.csv
+- growth_ratios.csv
+- valuation_ratios.csv
 - efficiency_ratios.csv
-- ratio_edge_cases.log
+- financial_metrics.csv
+- analytics_summary.csv
+- screener_output.xlsx
+- peer_comparison.xlsx
+- valuation_flags.csv
+- valuation_summary.xlsx
 
 ---
 
-# Database
+# Installation
 
-SQLite Database:
+Clone the repository:
 
+```bash
+git clone https://github.com/Pullareddy9371/n100_financial_platform.git
 ```
-db/nifty100.db
+
+Move into the project:
+
+```bash
+cd n100_financial_platform
 ```
 
-Database Tables:
+Install dependencies:
 
-- analysis
-- balancesheet
-- cashflow
-- companies
-- documents
-- financial_ratios
-- market_cap
-- peer_groups
-- profitandloss
-- prosandcons
-- sectors
-- stock_prices
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# Run Analytics
+
+```bash
+python -m src.analytics.valuation
+```
+
+---
+
+# Run Dashboard
+
+```bash
+streamlit run src/dashboard/app.py
+```
 
 ---
 
 # Testing
 
-Unit testing is implemented using **Pytest**.
-
 Run all tests:
 
 ```bash
-python -m pytest
+pytest
 ```
 
-Example Output
-
-```
-========= test session starts =========
-
-9 passed
-
-==============================
-```
+All project modules were tested successfully.
 
 ---
 
-# Running the Project
+# Learning Outcomes
 
-### Load Data
+This project demonstrates practical skills in:
 
-```bash
-python -m src.etl.data_loader
-```
-
-### Verify Database
-
-```bash
-python -m src.etl.verify_database
-```
-
-### Run Analytics
-
-```bash
-python -m src.analytics.day08
-python -m src.analytics.day09
-python -m src.analytics.day10
-python -m src.analytics.day11
-python -m src.analytics.day12
-python -m src.analytics.day13
-python -m src.analytics.day14
-python -m src.analytics.day15
-python -m src.analytics.day16
-python -m src.analytics.day17
-```
-
----
-
-# Project Highlights
-
-- End-to-End ETL Pipeline
-- Financial Data Validation
-- SQLite Database Integration
-- Financial KPI Engine
-- CAGR Analysis
-- Cash Flow Analysis
-- Automated Testing
-- Git Version Control
-- Business Analytics Reports
+- Python Programming
+- Data Engineering
+- Financial Analytics
+- SQLite Database Design
+- Pandas Data Processing
+- Streamlit Dashboard Development
+- Plotly Visualization
+- Report Automation
+- Data Validation
+- Git & GitHub
+- Debugging and Testing
 
 ---
 
 # Future Enhancements
 
-- Power BI Dashboard
-- Streamlit Web Application
-- REST API Integration
-- Automated Data Refresh
+- Live Stock Market API Integration
+- Machine Learning-based Stock Prediction
+- Portfolio Tracking
+- User Authentication
 - Cloud Deployment (AWS/Azure)
+- AI-powered Investment Recommendations
 
 ---
 
@@ -339,14 +356,14 @@ python -m src.analytics.day17
 
 **Pulla Reddy Onteddu**
 
-B.Tech – Artificial Intelligence & Machine Learning
+**B.Tech – Artificial Intelligence & Machine Learning**
 
-Bluestock Fintech Internship
+GitHub Repository:
 
-GitHub: https://github.com/Pullareddy9371/n100_financial_platform
+https://github.com/Pullareddy9371/n100_financial_platform
 
 ---
 
 # License
 
-This project is developed for educational and internship purposes.
+This project was developed for educational, internship, and portfolio purposes.

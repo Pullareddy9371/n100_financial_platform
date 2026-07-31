@@ -1,0 +1,4 @@
+st.image(
+    "src/dashboard/assets/logo.png",
+    width=120
+)
