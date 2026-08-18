@@ -1,53 +1,67 @@
 # 📊 N100 Financial Intelligence Platform
 
-A comprehensive Financial Intelligence Dashboard developed using **Python, SQLite, Streamlit, Pandas, and Plotly**. This project provides an end-to-end solution for analyzing Nifty 100 companies through financial analytics, stock screening, peer comparison, valuation analysis, sector insights, and interactive dashboards.
+A comprehensive Financial Intelligence Platform built using **Python, SQLite, Pandas, Streamlit, Plotly, Matplotlib, and ReportLab**. The platform provides end-to-end financial analysis for Nifty 100 companies, including ETL pipelines, financial ratio analytics, valuation, NLP-based insights, cash flow intelligence, automated PDF reports, sector analysis, and an interactive dashboard.
 
 ---
 
-# Project Overview
+# 🚀 Project Overview
 
-The N100 Financial Intelligence Platform is designed to help investors, analysts, and learners explore the financial performance of Nifty 100 companies.
+The N100 Financial Intelligence Platform helps investors, analysts, and students analyze the financial performance of Nifty 100 companies using structured financial data and automated analytics.
 
-The project includes:
+The platform includes:
 
-- Data Engineering (ETL)
-- SQLite Database Management
-- Financial Ratio Analytics
-- Stock Screening
+- ETL Pipeline
+- SQLite Database
+- Financial Ratio Engine
+- Stock Screener
 - Peer Comparison
 - Valuation Analytics
+- Financial Trend Analysis
+- Capital Allocation Intelligence
+- NLP-based Pros & Cons Generator
+- Cash Flow Intelligence
+- Company Tearsheet Reports
+- Sector Reports
+- Portfolio Summary Report
 - Interactive Streamlit Dashboard
-- CSV & Excel Report Generation
 
 ---
 
-# Project Modules
+# ✅ Project Modules
 
 | Module | Status |
 |---------|--------|
-| ✅ ETL Pipeline | Completed |
-| ✅ SQLite Database | Completed |
-| ✅ Financial Ratio Analytics | Completed |
-| ✅ Stock Screener | Completed |
-| ✅ Peer Comparison | Completed |
-| ✅ Financial Trends | Completed |
-| ✅ Sector Analysis | Completed |
-| ✅ Capital Allocation | Completed |
-| ✅ Reports Module | Completed |
-| ✅ Valuation Analytics | Completed |
-| ✅ Interactive Dashboard | Completed |
+| ETL Pipeline | ✅ Completed |
+| SQLite Database | ✅ Completed |
+| Financial Ratio Engine | ✅ Completed |
+| Profitability Analytics | ✅ Completed |
+| Liquidity Analytics | ✅ Completed |
+| Solvency Analytics | ✅ Completed |
+| Growth Analytics | ✅ Completed |
+| Efficiency Analytics | ✅ Completed |
+| Stock Screener | ✅ Completed |
+| Peer Comparison | ✅ Completed |
+| Valuation Analytics | ✅ Completed |
+| Financial Trend Analysis | ✅ Completed |
+| Capital Allocation Engine | ✅ Completed |
+| NLP Analysis Parser | ✅ Completed |
+| Pros & Cons Generator | ✅ Completed |
+| Cash Flow Intelligence | ✅ Completed |
+| Distress Detection | ✅ Completed |
+| Company Tearsheet Reports | ✅ Completed |
+| Sector Reports | ✅ Completed |
+| Portfolio Summary PDF | ✅ Completed |
+| Interactive Dashboard | ✅ Completed |
 
 ---
 
-# Dashboard Pages
+# 📊 Dashboard Features
 
 ## 🏠 Home Dashboard
 
-Displays:
-
 - Total Companies
 - Average ROE
-- Average Debt to Equity
+- Average Debt-to-Equity
 - Average Net Profit Margin
 - Asset Turnover
 - Sector Distribution
@@ -59,11 +73,12 @@ Displays:
 
 Displays:
 
-- Company Details
+- Company Information
+- Book Value
 - ROE
 - ROCE
-- Book Value
 - Company Overview
+- Financial Highlights
 
 ---
 
@@ -71,37 +86,37 @@ Displays:
 
 Supports filtering by:
 
-- Company Name
-- Sector
-- PE Ratio
-- PB Ratio
+- Company
 - ROE
 - Debt to Equity
+- PE Ratio
+- PB Ratio
+- Sector
 - Market Capitalization
 
 ---
 
 ## 🤝 Peer Comparison
 
-Compare companies based on:
+Compare companies using:
 
 - ROE
-- Net Profit Margin
-- PE Ratio
-- PB Ratio
+- Profit Margin
 - Debt to Equity
 - Interest Coverage
+- Asset Turnover
+- Free Cash Flow
 
 ---
 
 ## 📈 Financial Trends
 
-Interactive visualizations of:
+Visualizations for:
 
 - Revenue Trend
-- Profit Trend
+- Net Profit Trend
 - ROE Trend
-- Margin Trend
+- Operating Margin Trend
 
 ---
 
@@ -110,71 +125,154 @@ Interactive visualizations of:
 Provides:
 
 - Sector Distribution
-- Company Count
-- Market Cap Category
+- Sector KPIs
+- Company Rankings
 - Sector Comparison
 
 ---
 
-## 💰 Capital Allocation
-
-Displays:
-
-- Free Cash Flow
-- Capital Expenditure
-- Operating Cash Flow
-- Debt Analysis
-
----
-
-## 📑 Reports
-
-Generate and download:
-
-- CSV Reports
-- Excel Reports
-
----
-
-## 💎 Valuation Dashboard
+## 💰 Valuation Dashboard
 
 Calculates:
 
 - Free Cash Flow Yield
+- Dividend Yield
 - Sector Median PE
 - Sector Median PB
-- Dividend Yield
 - Valuation Classification
 
-Categories:
+---
 
-- Discount
-- Fair
-- Caution
-- Unknown
+## 📑 Reports Dashboard
+
+Generate:
+
+- CSV Reports
+- Excel Reports
+- PDF Reports
 
 ---
 
-# Technologies Used
+# 🧠 Sprint 5 Features
 
-- Python 3.11
-- Streamlit
-- Pandas
-- SQLite
-- Plotly
-- OpenPyXL
-- Matplotlib
-- PyYAML
-- Pytest
-- Git
-- GitHub
+## NLP Analysis Parser
+
+- Parses CAGR information from company analysis
+- Extracts structured financial metrics
+- Generates:
+  - analysis_parsed.csv
+  - parse_failures.csv
 
 ---
 
-# Project Structure
+## NLP Pros & Cons Generator
 
-```
-n100_financial_platform
+Automatically generates company strengths and weaknesses using rule-based analysis.
+
+Features:
+
+- 12 Pro Rules
+- 12 Con Rules
+- Confidence Score (0–100)
+- Minimum confidence threshold
+- One pro and one con for every company
+
+Outputs:
+
+- pros_cons_generated.csv
+
+---
+
+## Cash Flow Intelligence
+
+Computes:
+
+- CFO Quality Score
+- Free Cash Flow
+- CapEx Intensity
+- FCF Conversion Rate
+- Distress Detection
+- Deleveraging Detection
+- Capital Allocation Pattern
+
+Outputs:
+
+- cashflow_intelligence.xlsx
+- distress_alerts.csv
+
+---
+
+## Capital Allocation Analysis
+
+Identifies cash flow patterns including:
+
+- Reinvestor
+- Growth Funded by Debt
+- Cash Rich
+- Cash Accumulator
+- Debt Reduction
+- Distress
+- Mixed
+- Pre-Revenue
+
+Outputs:
+
+- capital_allocation.csv
+- pattern_changes.csv
+
+---
+
+## Company Tearsheet Reports
+
+Automatically generates professional two-page PDF reports containing:
+
+### Page 1
+
+- Company Header
+- KPI Cards
+- Revenue Trend
+- Net Profit Trend
+- ROE Trend
+
+### Page 2
+
+- Balance Sheet Composition
+- Cash Flow Summary
+- Pros
+- Cons
+- Capital Allocation Badge
+
+Generated for all available companies.
+
+---
+
+## Sector Reports
+
+Automatically generates sector-wise PDF reports containing:
+
+- Sector Summary
+- Median KPIs
+- Company Comparison Table
+
+Generated for all sectors.
+
+---
+
+## Portfolio Summary Report
+
+Generates a consolidated PDF containing:
+
+- Company Overview
+- Top KPIs
+- Financial Trends
+- Performance Summary
+
+---
+
+# 📂 Project Structure
+
+```text
+n100_financial_platform/
 │
 ├── config/
 │
@@ -186,13 +284,17 @@ n100_financial_platform
 │   └── nifty100.db
 │
 ├── reports/
+│   ├── tearsheets/
+│   ├── sector/
+│   ├── portfolio/
+│   ├── tearsheet.py
+│   └── sector_report.py
 │
 ├── src/
 │   ├── analytics/
 │   ├── dashboard/
-│   │   ├── app.py
-│   │   └── pages/
 │   ├── etl/
+│   ├── nlp/
 │   ├── output/
 │   ├── screener/
 │   └── utils/
@@ -205,42 +307,98 @@ n100_financial_platform
 
 ---
 
-# Database Tables
+# 🗄 Database Tables
 
 - Companies
 - Financial Ratios
-- Market Capitalization
-- Sectors
-- Balance Sheet
 - Profit & Loss
+- Balance Sheet
 - Cash Flow
-- Documents
 - Analysis
-- Pros & Cons
+- Documents
+- Market Cap
 - Peer Groups
+- Sectors
 - Stock Prices
 
 ---
 
-# Features
+# 📁 Generated Outputs
 
-- Interactive Streamlit Dashboard
-- Financial Ratio Analysis
-- KPI Cards
-- Stock Screening
-- Peer Comparison
-- Company Search
-- Sector Filters
-- Financial Trend Analysis
-- Capital Allocation Analysis
-- Valuation Engine
-- CSV Export
-- Excel Export
-- Interactive Plotly Charts
+## CSV
+
+- profitability_ratios.csv
+- liquidity_ratios.csv
+- growth_ratios.csv
+- solvency_ratios.csv
+- efficiency_ratios.csv
+- valuation_flags.csv
+- analysis_parsed.csv
+- parse_failures.csv
+- pros_cons_generated.csv
+- distress_alerts.csv
+- capital_allocation.csv
+- pattern_changes.csv
+- skipped_tearsheets.csv
 
 ---
 
-# Analytics Performed
+## Excel
+
+- screener_output.xlsx
+- peer_comparison.xlsx
+- valuation_summary.xlsx
+- cashflow_intelligence.xlsx
+
+---
+
+## PDF Reports
+
+### Company Reports
+
+```
+reports/tearsheets/
+```
+
+Individual company financial tearsheets.
+
+### Sector Reports
+
+```
+reports/sector/
+```
+
+Sector-wise financial summaries.
+
+### Portfolio Report
+
+```
+reports/portfolio/
+```
+
+Portfolio summary PDF.
+
+---
+
+# 🛠 Technologies Used
+
+- Python 3.11
+- SQLite
+- Pandas
+- NumPy
+- Streamlit
+- Plotly
+- Matplotlib
+- ReportLab
+- OpenPyXL
+- PyYAML
+- Pytest
+- Git
+- GitHub
+
+---
+
+# 📈 Analytics Performed
 
 - Profitability Analysis
 - Liquidity Analysis
@@ -248,32 +406,17 @@ n100_financial_platform
 - Efficiency Analysis
 - Growth Analysis
 - Valuation Analysis
-- Free Cash Flow Yield
-- Sector Median PE & PB Analysis
-- Dividend Yield Analysis
+- Peer Comparison
+- Financial Trend Analysis
+- Cash Flow Intelligence
+- Distress Detection
+- Capital Allocation Analysis
+- NLP Rule-Based Analysis
+- Sector Analytics
 
 ---
 
-# Output Files
-
-Generated reports include:
-
-- profitability_ratios.csv
-- liquidity_ratios.csv
-- solvency_ratios.csv
-- growth_ratios.csv
-- valuation_ratios.csv
-- efficiency_ratios.csv
-- financial_metrics.csv
-- analytics_summary.csv
-- screener_output.xlsx
-- peer_comparison.xlsx
-- valuation_flags.csv
-- valuation_summary.xlsx
-
----
-
-# Installation
+# ⚙️ Installation
 
 Clone the repository:
 
@@ -287,6 +430,20 @@ Move into the project:
 cd n100_financial_platform
 ```
 
+Create virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Activate virtual environment:
+
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
 Install dependencies:
 
 ```bash
@@ -295,75 +452,73 @@ pip install -r requirements.txt
 
 ---
 
-# Run Analytics
+# ▶️ Running the Project
+
+Run analytics:
 
 ```bash
 python -m src.analytics.valuation
 ```
 
----
-
-# Run Dashboard
+Run Streamlit dashboard:
 
 ```bash
 streamlit run src/dashboard/app.py
 ```
 
----
-
-# Testing
-
-Run all tests:
+Run tests:
 
 ```bash
 pytest
 ```
 
-All project modules were tested successfully.
-
 ---
 
-# Learning Outcomes
+# 🎯 Learning Outcomes
 
-This project demonstrates practical skills in:
+This project demonstrates practical experience in:
 
 - Python Programming
-- Data Engineering
-- Financial Analytics
+- Financial Data Analytics
+- ETL Pipelines
 - SQLite Database Design
+- Data Cleaning
 - Pandas Data Processing
+- Financial Ratio Analysis
+- Rule-Based NLP
+- Cash Flow Intelligence
+- Automated PDF Report Generation
+- Data Visualization
 - Streamlit Dashboard Development
-- Plotly Visualization
-- Report Automation
-- Data Validation
-- Git & GitHub
-- Debugging and Testing
+- Testing and Debugging
+- Git & GitHub Version Control
 
 ---
 
-# Future Enhancements
+# 🔮 Future Enhancements
 
-- Live Stock Market API Integration
-- Machine Learning-based Stock Prediction
-- Portfolio Tracking
+- Live NSE/BSE Data Integration
+- AI-based Investment Recommendation Engine
+- Machine Learning Stock Prediction
+- Portfolio Optimization
 - User Authentication
 - Cloud Deployment (AWS/Azure)
-- AI-powered Investment Recommendations
+- REST API Support
 
 ---
 
-# Author
+# 👨‍💻 Author
 
 **Pulla Reddy Onteddu**
 
-**B.Tech – Artificial Intelligence & Machine Learning**
+B.Tech – Artificial Intelligence & Machine Learning
 
-GitHub Repository:
+GitHub:
 
-https://github.com/Pullareddy9371/n100_financial_platform
+**https://github.com/Pullareddy9371/n100_financial_platform**
 
 ---
 
-# License
+# 📄 License
 
 This project was developed for educational, internship, and portfolio purposes.
